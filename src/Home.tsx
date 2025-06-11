@@ -1,14 +1,7 @@
-import { Link } from "react-router";
 import { useState, useEffect } from "react";
-import {
-	BadgeAlert,
-	BookMarked,
-	DropletOff,
-	Facebook,
-	Instagram,
-	ShieldCheck,
-	Twitter,
-} from "lucide-react";
+import { BadgeAlert, BookMarked, DropletOff, ShieldCheck } from "lucide-react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -117,23 +110,10 @@ export default function Home() {
 	return (
 		<>
 			<main className="w-full h-dvh space-y-10 sm:space-y-32">
-				<header className="fixed z-10 w-full bg-white flex justify-between items-center shadow-lg py-3 sm:py-7 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
-					<h1 className="text-lg sm:text-3xl text-blue-500 font-black">Jernih</h1>
-					<nav>
-						<ul>
-							<li>
-								<Link to={"/login"}>
-									<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-										Login
-									</button>
-								</Link>
-							</li>
-						</ul>
-					</nav>
-				</header>
+				<Header />
 				<section className="pt-20 sm:pt-36 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
 					<div className="relative w-full">
-						<div className="relative h-[100px] sm:h-[200px] lg:h-96 overflow-hidden rounded-2xl shadow-2xl">
+						<div className="relative h-[100px] sm:h-[200px] lg:h-96 overflow-hidden rounded-sm sm:rounded-2xl shadow-2xl">
 							{slides.map((slide, index) => (
 								<div
 									key={slide.id}
@@ -173,36 +153,44 @@ export default function Home() {
 						<p className="text-center text-xs sm:text-base">
 							Membuat filter air sederhana
 						</p>
-						<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-							Kepoin disini
-						</button>
+						<a href="/membuat-filter-air-sederhana">
+							<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
+								Kepoin disini
+							</button>
+						</a>
 					</div>
 					<div className="w-[120px] sm:w-[200px] flex flex-col items-center gap-5">
 						<DropletOff className="w-7 sm:w-14 h-7 sm:h-14 text-blue-500" />
 						<p className="text-center text-xs sm:text-base">
 							Air kamu layak pakai atau tidak?
 						</p>
-						<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-							Kepoin disini
-						</button>
+						<a href="/air-kamu-layak-pakai-atau-tidak">
+							<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
+								Kepoin disini
+							</button>
+						</a>
 					</div>
 					<div className="w-[120px] sm:w-[200px] flex flex-col items-center gap-5">
 						<ShieldCheck className="w-7 sm:w-14 h-7 sm:h-14 text-blue-500" />
 						<p className="text-center text-xs sm:text-base">
 							Cara menyimpan air bersih agar aman
 						</p>
-						<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-							Kepoin disini
-						</button>
+						<a href="/cara-menyimpan-air-bersih-agar-aman">
+							<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
+								Kepoin disini
+							</button>
+						</a>
 					</div>
 					<div className="w-[120px] sm:w-[200px] flex flex-col items-center gap-5">
 						<BadgeAlert className="w-7 sm:w-14 h-7 sm:h-14 text-blue-500" />
 						<p className="text-center text-xs sm:text-base">
 							Dampak air tercemar bagi kehidupan
 						</p>
-						<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-							Kepoin disini
-						</button>
+						<a href="/dampak-air-tercemar-bagi-kehidupan">
+							<button className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
+								Kepoin disini
+							</button>
+						</a>
 					</div>
 				</section>
 				<section className="px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
@@ -300,22 +288,7 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<footer className="w-full bg-gradient-to-br from-blue-900 to-blue-500 py-7 px-2 sm:px-10 xl:px-[200px] 2xl:px-[350px] space-y-10">
-					<div className="flex justify-between items-center">
-						<h1 className="text-lg sm:text-2xl text-white font-medium">Jernih</h1>
-						<div className="flex gap-5 text-white">
-							<p className="text-xs sm:text-base">Follow kami</p>
-							<Instagram className="w-5 sm:w-7 h-5 sm:h-7" />
-							<Facebook className="w-5 sm:w-7 h-5 sm:h-7" />
-							<Twitter className="w-5 sm:w-7 h-5 sm:h-7" />
-						</div>
-					</div>
-					<div className="border-t border-white pt-5">
-						<p className="text-white text-center text-xs sm:text-base">
-							&copy; Copyright Jernih | All Rights Reserved
-						</p>
-					</div>
-				</footer>
+				<Footer />
 			</main>
 		</>
 	);
