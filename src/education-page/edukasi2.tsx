@@ -6,9 +6,11 @@ export default function Edukasi2() {
 		<>
 			<Header />
 			<section className="py-20 sm:py-36 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px] space-y-10 md:space-y-15">
-				<p className="text-xl">
+				<p className="text-sm sm:text-xl">
 					<a href="/">Beranda</a> /{" "}
-					<a href="/air-kamu-layak-pakai-atau-tidak">Air kamu layak pakai atau tidak?</a>
+					<a href="/air-kamu-layak-pakai-atau-tidak">
+						Air kamu layak pakai atau tidak?
+					</a>
 				</p>
 				<img
 					className="w-full h-[200px] md:h-[400px] rounded-2xl object-cover"
