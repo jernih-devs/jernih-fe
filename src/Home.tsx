@@ -35,11 +35,10 @@ export default function Home() {
 				"Sumur di daerah ini menghasilkan air yang keruh dan berlumpur, tidak layak digunakan untuk mandi, mencuci, apalagi dikonsumsi. Warga sangat membutuhkan bantuan untuk mendapatkan air bersih.",
 			contact: "Support +62 813-1391-5594 (Telepon & WhatsApp)",
 			buttons: [
-				{ text: "Lihat detail", style: "bg-white text-blue-600 hover:bg-gray-100" },
 				{
-					text: "Kirim donasi",
-					style:
-						"border-2 border-white text-white hover:bg-white hover:text-blue-600",
+					text: "Lihat detail",
+					href: "/post/post1",
+					style: "bg-white text-blue-600 hover:bg-gray-100",
 				},
 			],
 		},
@@ -51,11 +50,10 @@ export default function Home() {
 				"Air yang tersedia di wilayah ini berwarna hitam pekat, menandakan pencemaran serius. Kondisi ini sangat membahayakan kesehatan warga, terutama anak-anak dan lansia.",
 			contact: "Support +62 821-1234-5678 (Telepon & WhatsApp)",
 			buttons: [
-				{ text: "Lihat detail", style: "bg-white text-blue-600 hover:bg-gray-100" },
 				{
-					text: "Kirim donasi",
-					style:
-						"border-2 border-white text-white hover:bg-white hover:text-blue-600",
+					text: "Lihat detail",
+					href: "/post/post2",
+					style: "bg-white text-blue-600 hover:bg-gray-100",
 				},
 			],
 		},
@@ -67,11 +65,10 @@ export default function Home() {
 				"Warga mengalami kekeringan berkepanjangan sehingga sulit mendapatkan air untuk kebutuhan sehari-hari. Mereka terpaksa menempuh jarak jauh untuk mencari sumber air.",
 			contact: "Support +62 812-9876-5432 (Telepon & WhatsApp)",
 			buttons: [
-				{ text: "Lihat detail", style: "bg-white text-blue-600 hover:bg-gray-100" },
 				{
-					text: "Kirim donasi",
-					style:
-						"border-2 border-white text-white hover:bg-white hover:text-blue-600",
+					text: "Lihat detail",
+					href: "/post/post3",
+					style: "bg-white text-blue-600 hover:bg-gray-100",
 				},
 			],
 		},
@@ -83,11 +80,9 @@ export default function Home() {
 				"Warga hanya memiliki akses ke air berwarna keruh dan berbau. Kondisi ini menyebabkan gangguan kesehatan dan sanitasi, terutama saat musim hujan.",
 			contact: "Support +62 813-5555-9999 (Telepon & WhatsApp)",
 			buttons: [
-				{ text: "Lihat detail", style: "bg-white text-blue-600 hover:bg-gray-100" },
 				{
-					text: "Kirim donasi",
-					style:
-						"border-2 border-white text-white hover:bg-white hover:text-blue-600",
+					text: "Lihat detail",
+					href: "/post/post4",
 				},
 			],
 		},
@@ -224,11 +219,12 @@ export default function Home() {
 									<p className="text-blue-200 text-sm">{currentSlideData2.contact}</p>
 									<div className="flex space-x-4">
 										{currentSlideData2.buttons.map((button, index) => (
-											<button
+											<a
+												href={button.href}
 												key={index}
-												className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${button.style}`}>
+												className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 bg-white text-blue-600 hover:bg-gray-100">
 												{button.text}
-											</button>
+											</a>
 										))}
 									</div>
 								</div>
@@ -263,11 +259,12 @@ export default function Home() {
 									</p>
 									<div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
 										{currentSlideData2.buttons.map((button, index) => (
-											<button
+											<a
+												href={button.href}
 												key={index}
-												className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${button.style}`}>
+												className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base bg-white text-blue-600 hover:bg-gray-100">
 												{button.text}
-											</button>
+											</a>
 										))}
 									</div>
 								</div>

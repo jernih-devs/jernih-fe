@@ -8,6 +8,7 @@ import Edukasi1 from "./education-page/edukasi1.tsx";
 import Edukasi2 from "./education-page/edukasi2.tsx";
 import Edukasi3 from "./education-page/edukasi3.tsx";
 import Edukasi4 from "./education-page/edukasi4.tsx";
+import PostPage from "./post-page/postPage.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
 	{
 		path: "/dampak-air-tercemar-bagi-kehidupan",
 		element: <Edukasi4 />,
+	},
+	{
+		path: "/post/:slug",
+		element: <PostPage />,
 	},
 ]);
 
