@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Dropzone from "react-dropzone";
-import { useState } from "react";
+// import { useState } from "react";
 import { UploadIcon } from "lucide-react";
 
 export default function Upload() {
-	const [preview, setPreview] = useState<string>("");
+	// const [preview, setPreview] = useState<string>("");
 
 	function handleImage(file: File[]) {
-		const image = file[0];
+		console.log(file);
+		// const image = file[0];
 
-		setPreview(URL.createObjectURL(image));
+		// setPreview(URL.createObjectURL(image));
 	}
 	return (
 		<>
