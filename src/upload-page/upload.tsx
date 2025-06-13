@@ -22,7 +22,7 @@ export default function Upload() {
 					<Link to="/">Beranda</Link> / Upload
 				</p>
 			</section>
-			<section className="py-3 sm:py-7 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
+			<section className="pb-15 py-3 sm:py-7 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
 				<form action="">
 					<ul className="space-y-5 sm:space-y-8">
 						<li className="flex flex-col gap-3">
