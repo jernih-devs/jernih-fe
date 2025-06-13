@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BadgeAlert, BookMarked, DropletOff, ShieldCheck } from "lucide-react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { useAuth } from "./contexts/AuthContext";
 
 export default function Home() {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -102,12 +103,20 @@ export default function Home() {
 
 	const currentSlideData2 = slides2[currentSlide2];
 
+	const { isAuthenticated } = useAuth();
+
 	return (
 		<>
 			<main className="w-full h-dvh space-y-10 sm:space-y-32">
 				<Header />
 				<section className="pt-20 sm:pt-36 px-2 sm:px-7 xl:px-[200px] 2xl:px-[350px]">
-					<div className="relative w-full">
+					{isAuthenticated && (
+						<h1 className="text-3xl text-zinc-800 font-bold">
+							Selamat datang{" "}
+							{JSON.parse(localStorage.getItem("user") || "{}")?.userData?.fullname} 👋
+						</h1>
+					)}
+					<div className="mt-5 relative w-full">
 						<div className="relative h-[100px] sm:h-[200px] lg:h-96 overflow-hidden rounded-sm sm:rounded-2xl shadow-2xl">
 							{slides.map((slide, index) => (
 								<div

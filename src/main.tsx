@@ -9,6 +9,12 @@ import Edukasi2 from "./education-page/edukasi2.tsx";
 import Edukasi3 from "./education-page/edukasi3.tsx";
 import Edukasi4 from "./education-page/edukasi4.tsx";
 import PostPage from "./post-page/postPage.tsx";
+import { AuthProvider } from "./contexts/AuthContext.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import axios from "axios";
+import PublicRoute from "./components/PublicRoute.tsx";
+
+axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
 	{
@@ -17,34 +23,68 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/login",
-		element: <Login />,
+		element: (
+			<PublicRoute>
+				<Login />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/register",
-		element: <Register />,
+		element: (
+			<PublicRoute>
+				<Register />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/membuat-filter-air-sederhana",
-		element: <Edukasi1 />,
+		element: (
+			<PublicRoute>
+				<Edukasi1 />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/air-kamu-layak-pakai-atau-tidak",
-		element: <Edukasi2 />,
+		element: (
+			<PublicRoute>
+				<Edukasi2 />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/cara-menyimpan-air-bersih-agar-aman",
-		element: <Edukasi3 />,
+		element: (
+			<PublicRoute>
+				<Edukasi3 />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/dampak-air-tercemar-bagi-kehidupan",
-		element: <Edukasi4 />,
+		element: (
+			<PublicRoute>
+				<Edukasi4 />
+			</PublicRoute>
+		),
 	},
 	{
 		path: "/post/:slug",
-		element: <PostPage />,
+		element: (
+			<PublicRoute>
+				<PostPage />
+			</PublicRoute>
+		),
 	},
 ]);
 
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")!).render(
-	<RouterProvider router={router} />
+	<QueryClientProvider client={queryClient}>
+		<AuthProvider>
+			<RouterProvider router={router} />
+		</AuthProvider>
+	</QueryClientProvider>
 );
