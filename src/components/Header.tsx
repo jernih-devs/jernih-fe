@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useAuth } from "../contexts/AuthContext";
+import { Plus } from "lucide-react";
 
 export default function Header() {
 	const { isAuthenticated, logout } = useAuth();
@@ -17,13 +18,18 @@ export default function Header() {
 			<nav>
 				<ul>
 					{isAuthenticated ? (
-						<li>
-							<form onSubmit={handleSubmit}>
-								<button className="cursor-pointer bg-red-400 hover:bg-red-600 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
-									Keluar
-								</button>
-							</form>
-						</li>
+						<div className="flex gap-3">
+							<Link to={"/upload"}>
+								<Plus className="cursor-pointer w-full bg-blue-500 hover:bg-blue-600 text-white rounded-md" />
+							</Link>
+							<li>
+								<form onSubmit={handleSubmit}>
+									<button className="cursor-pointer bg-red-400 hover:bg-red-600 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
+										Keluar
+									</button>
+								</form>
+							</li>
+						</div>
 					) : (
 						<li>
 							<Link to={"/login"}>

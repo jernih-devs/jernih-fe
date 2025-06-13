@@ -13,6 +13,7 @@ import { AuthProvider } from "./contexts/AuthContext.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import axios from "axios";
 import PublicRoute from "./components/PublicRoute.tsx";
+import Upload from "./upload-page/upload.tsx";
 
 axios.defaults.withCredentials = true;
 
@@ -39,43 +40,27 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/membuat-filter-air-sederhana",
-		element: (
-			<PublicRoute>
-				<Edukasi1 />
-			</PublicRoute>
-		),
+		element: <Edukasi1 />,
 	},
 	{
 		path: "/air-kamu-layak-pakai-atau-tidak",
-		element: (
-			<PublicRoute>
-				<Edukasi2 />
-			</PublicRoute>
-		),
+		element: <Edukasi2 />,
 	},
 	{
 		path: "/cara-menyimpan-air-bersih-agar-aman",
-		element: (
-			<PublicRoute>
-				<Edukasi3 />
-			</PublicRoute>
-		),
+		element: <Edukasi3 />,
 	},
 	{
 		path: "/dampak-air-tercemar-bagi-kehidupan",
-		element: (
-			<PublicRoute>
-				<Edukasi4 />
-			</PublicRoute>
-		),
+		element: <Edukasi4 />,
 	},
 	{
 		path: "/post/:slug",
-		element: (
-			<PublicRoute>
-				<PostPage />
-			</PublicRoute>
-		),
+		element: <PostPage />,
+	},
+	{
+		path: "/upload",
+		element: <Upload />,
 	},
 ]);
 
