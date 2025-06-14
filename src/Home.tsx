@@ -271,7 +271,7 @@ export default function Home() {
 											<a
 												href={button.href}
 												key={index}
-												className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base bg-white text-blue-600 hover:bg-gray-100">
+												className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-center font-semibold transition-all duration-300 text-sm sm:text-base bg-white text-blue-600 hover:bg-gray-100">
 												{button.text}
 											</a>
 										))}

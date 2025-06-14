@@ -18,9 +18,11 @@ export default function Header() {
 			<nav>
 				<ul>
 					{isAuthenticated ? (
-						<div className="flex gap-3">
+						<div className="flex gap-3 items-center">
 							<Link to={"/upload"}>
-								<Plus className="cursor-pointer w-full bg-blue-500 hover:bg-blue-600 text-white rounded-md" />
+								<div className="bg-blue-500 hover:bg-blue-600 text-white rounded-md p-3 flex items-center justify-center cursor-pointer">
+									<Plus className="w-6 h-6" />
+								</div>
 							</Link>
 							<li>
 								<form onSubmit={handleSubmit}>

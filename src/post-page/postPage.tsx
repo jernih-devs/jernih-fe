@@ -14,7 +14,7 @@ export default function PostPage() {
 				<p className="text-sm sm:text-xl">
 					{data.breadcrumbs.map((item, index) => (
 						<span key={index}>
-							<a href={item.href}>{item.label}</a>
+							<a className="hover:underline" href={item.href}>{item.label}</a>
 							{index < data.breadcrumbs.length - 1 && " / "}
 						</span>
 					))}
@@ -25,9 +25,12 @@ export default function PostPage() {
 					alt={data.mainImage.alt}
 				/>
 				<section className="space-y-2 sm:space-y-5 text-zinc-800">
-					<h1 className="text-xl md:text-3xl text-blue-500 font-bold">
-						{data.content.title}
-					</h1>
+					<div>
+						<h1 className="text-xl md:text-3xl text-blue-500 font-bold">
+							{data.content.title}
+						</h1>
+						<p>Kabupaten Bandung, Bojongsoang</p>
+					</div>
 					<p className="text-xs sm:text-sm md:text-xl">{data.content.description}</p>
 				</section>
 				<section className="grid grid-cols-12 gap-2 sm:gap-5">
