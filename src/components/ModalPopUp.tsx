@@ -11,7 +11,7 @@ export default function ModalPopUp({ open, close }: ModalPopUpProps) {
 				<h1 className="text-base sm:text-xl text-center font-bold text-blue-500">
 					Tata cara untuk mengupload
 				</h1>
-				<table className="w-full text-zinc-800">
+				<table className="w-full">
 					<thead>
 						<tr>
 							<th className="text-xs sm:text-base border border-gray-400 p-2">
@@ -27,105 +27,99 @@ export default function ModalPopUp({ open, close }: ModalPopUpProps) {
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Judul
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Kondisi permasalahan air yang kamu alami sekarang
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Kondisi permasalahan air yang kamu alami sekarang</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Provinsi
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Provinsi
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Provinsi</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Kota/Kabupaten
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Kota/Kabupaten
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Kota/Kabupaten</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Kecamatan
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Kecamatan
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Kecamatan</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Detail Lokasi
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Detail Lokasi kamu
-								<br />
-								<span className="text-red-500">
-									<i>
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>
+									Detail Lokasi kamu
+									<br />
+									<span className="text-red-400">
 										*Kota Bandung, Bojongsoang, Citeureup, JL.Sukabirus No 6 RT 2 RW 5
-									</i>
-								</span>
+									</span>
+								</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Lokasi berdasarkan Google Maps
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Lokasi berdasarkan Google Maps
-								<br />
-								<ul className="text-xs sm:text-base text-red-500">
-									<li>
-										<i>1. Buka Google Maps</i>
-									</li>
-									<li>
-										<i>2. Klik bagikan lokasi</i>
-									</li>
-									<li>
-										<i>3. Klik sematkan peta</i>
-									</li>
-									<li>
-										<i>4. Salin HTML dan paste di kolom input</i>
-									</li>
-								</ul>
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>
+									Lokasi berdasarkan Google Maps
+									<br />
+									<ul className="text-xs sm:text-base text-red-400">
+										<li>1. Buka Google Maps</li>
+										<li>2. Klik bagikan lokasi</li>
+										<li>3. Klik sematkan peta</li>
+										<li>4. Salin HTML dan paste di kolom input</li>
+									</ul>
+								</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Deskripsi
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Deskripsi permasalahan air yang kamu alami sekarang
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Deskripsi permasalahan air yang kamu alami sekarang</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Dokumentasi 1 - 3
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								3 foto permasalahan air yang kamu alami
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>3 foto permasalahan air yang kamu alami</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Tautan Narahubung
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Tautan untuk menghubungi kamu
-								<br />
-								<span className="text-red-500">
-									<i>*https://wa.me/68*********</i>
-								</span>
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>
+									Tautan untuk menghubungi kamu
+									<br />
+									<span className="text-red-400">*https://wa.me/68*********</span>
+								</i>
 							</td>
 						</tr>
 						<tr>
 							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
 								Tautan Donasi
 							</td>
-							<td className="text-xs sm:text-base text-center border border-gray-400 p-2">
-								Tautan untuk donasi
+							<td className="text-zinc-500 text-xs sm:text-base text-center border border-gray-400 p-2">
+								<i>Tautan untuk donasi</i>
 							</td>
 						</tr>
 					</tbody>

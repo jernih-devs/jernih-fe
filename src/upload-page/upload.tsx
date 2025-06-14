@@ -172,33 +172,6 @@ export default function Upload() {
 						<ul className="space-y-5 sm:space-y-8">
 							<li className="flex flex-col gap-3">
 								<label className="text-xs sm:text-base font-semibold" htmlFor="">
-									Banner
-								</label>
-								<Dropzone onDrop={handleImage}>
-									{({ getRootProps, getInputProps }) => (
-										<label
-											{...getRootProps()}
-											htmlFor="dropzone-file"
-											className="flex flex-col items-center justify-center w-full h-40 border-2 border-neutral-400 border-dashed rounded-lg cursor-pointer">
-											<div className="flex flex-col items-center justify-center pt-5 pb-6">
-												<UploadIcon color="gray" />
-												<p className="mb-2 text-xs sm:text-sm">
-													Drag & drop{" "}
-													<span className="text-xs sm:text-base font-semibold">
-														or browse
-													</span>
-												</p>
-												<p className="text-xs text-gray-500 dark:text-gray-400">
-													JPG, PNG, or SVG | MAX 10 mb
-												</p>
-											</div>
-											<input {...getInputProps()} className="hidden" />
-										</label>
-									)}
-								</Dropzone>
-							</li>
-							<li className="flex flex-col gap-3">
-								<label className="text-xs sm:text-base font-semibold" htmlFor="">
 									Judul
 								</label>
 								<input

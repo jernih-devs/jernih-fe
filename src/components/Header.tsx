@@ -19,11 +19,11 @@ export default function Header() {
 				<ul>
 					{isAuthenticated ? (
 						<div className="flex gap-3 items-center">
-							<Link to={"/upload"}>
+							<a href="/upload">
 								<div className="bg-blue-500 hover:bg-blue-600 text-white rounded-md p-3 flex items-center justify-center cursor-pointer">
 									<Plus className="w-6 h-6" />
 								</div>
-							</Link>
+							</a>
 							<li>
 								<form onSubmit={handleSubmit}>
 									<button className="cursor-pointer bg-red-400 hover:bg-red-600 text-white text-xs sm:text-base font-semibold py-3 px-4 rounded-md">
